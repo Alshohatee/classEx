@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p>Enter some text in the fields below, then press the "Submit form" button to submit the form.</p>
+
+    <form id="myForm">
+        First name: <input type="text" id="input" name="fname"><br>
+
+
+    </form>
+
+
+
+
+
+
+
+
+    <p id="TheTextYouInput"> </p>
+    <script>
+        const form = document.getElementById('myForm');
+
+        console.log(form)
+
+
+
+
+        form.addEventListener('submit', (event) => {
+
+            event.preventDefault();
+
+            const fname = document.getElementById('input').value;
+            //const fname = form.elements['fname'].value;
+
+            const p = document.getElementById('TheTextYouInput');
+
+            p.innerHTML = fname;
+        });
+    </script>
+
+</body>
+
+</html>
